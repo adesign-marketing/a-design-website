@@ -1,3 +1,3 @@
-# ASC Freudenstadt Website
+# A Desing Website
 
-Willkommen auf unserer Vereinsseite.
+Willkommen auf meinem Internetauftritt.
