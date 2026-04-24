@@ -95,10 +95,47 @@ article,.steps div{
 .portrait{
   aspect-ratio:4/5;
   border-radius:36px;
-  background:linear-gradient(135deg,#111,#c7a27a);
+  background:
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(135deg,#0d0d0d,#c7a27a);
+  background-size:28px 28px,28px 28px,100% 100%;
   overflow:hidden;
+  display:grid;
+  place-items:center;
+  padding:28px;
 }
-.portrait img{width:100%;height:100%;object-fit:cover;opacity:.75}
+.portrait-placeholder{
+  width:100%;
+  height:100%;
+  border:1px solid rgba(255,255,255,.36);
+  border-radius:28px;
+  display:grid;
+  place-items:center;
+  align-content:center;
+  gap:16px;
+  color:var(--white);
+  text-align:center;
+  background:rgba(5,5,5,.2);
+}
+.portrait-placeholder span{
+  width:118px;
+  height:118px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.5);
+  font-family:Georgia,serif;
+  font-size:3rem;
+  line-height:1;
+}
+.portrait-placeholder p{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  font-size:.95rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
 .steps{
   display:grid;
   grid-template-columns:repeat(3,1fr);
