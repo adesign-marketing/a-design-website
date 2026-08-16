@@ -3,6 +3,41 @@ root.classList.add("js");
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNavigation = document.querySelector(".site-nav");
+
+if (siteHeader && menuToggle && siteNavigation) {
+  const setMenuOpen = (isOpen) => {
+    siteHeader.classList.toggle("is-menu-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    menuToggle.setAttribute("aria-label", isOpen ? "Menü schließen" : "Menü öffnen");
+  };
+
+  menuToggle.addEventListener("click", () => {
+    setMenuOpen(!siteHeader.classList.contains("is-menu-open"));
+  });
+
+  siteNavigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+
+  document.addEventListener("pointerdown", (event) => {
+    if (!siteHeader.contains(event.target)) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteHeader.classList.contains("is-menu-open")) {
+      setMenuOpen(false);
+      menuToggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1180) setMenuOpen(false);
+  });
+}
+
 const slider = document.querySelector("[data-slider]");
 
 if (slider) {
