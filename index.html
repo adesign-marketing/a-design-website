@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=21" />
+  <link rel="stylesheet" href="styles.css?v=22" />
 </head>
 <body>
 <header class="site-header">
   <a class="logo" href="#top"><img src="assets/logo-schwarz.png" alt="a design by Alina Renz"></a>
-  <nav>
+  <nav class="site-nav" id="site-navigation">
     <a href="#leistungen">Leistungen</a>
     <a href="#studio">Was a design ausmacht</a>
     <a href="#about">Über mich</a>
@@ -21,6 +21,11 @@
     <a href="#kontakt">Kontakt</a>
     <a href="https://www.instagram.com/about_adesign" target="_blank" rel="noopener">Instagram</a>
   </nav>
+  <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Menü öffnen">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </button>
   <a class="header-cta" href="#kontakt">Projekt anfragen</a>
 </header>
 
@@ -231,6 +236,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<script src="script.js?v=12"></script>
 </body>
 </html>
